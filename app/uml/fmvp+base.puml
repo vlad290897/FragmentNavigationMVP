@@ -1,0 +1,24 @@
+@startuml
+
+left to right direction
+
+abstract class BaseFragment
+
+class FragmentOne implements FragmentOneVP.View{
+//..
+--
+//..
+}
+
+class FragmentOnePresenter implements FragmentOneVP.Presenter{
+//..
+--
+//..
+}
+
+FragmentOne -> FragmentOneVP.Presenter
+FragmentOnePresenter --> FragmentOneVP.View
+
+FragmentOne --left--|> BaseFragment
+
+@enduml

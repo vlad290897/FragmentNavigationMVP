@@ -1,0 +1,18 @@
+@startuml
+
+left to right direction
+
+interface FragmentNavigation
+
+interface View {
+     void atachPresenter(Presenter presenter);
+}
+
+interface Presenter {
+    void addFragment(BaseFragment fragment);
+}
+
+FragmentNavigation *-- View
+FragmentNavigation *-- Presenter
+
+@enduml

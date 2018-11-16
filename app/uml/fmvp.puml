@@ -1,0 +1,20 @@
+@startuml
+
+left to right direction
+
+class FragmentOne implements FragmentOneVP.View{
+//..
+--
+//..
+}
+
+class FragmentOnePresenter implements FragmentOneVP.Presenter{
+//..
+--
+//..
+}
+
+FragmentOne -> FragmentOneVP.Presenter
+FragmentOnePresenter --> FragmentOneVP.View
+
+@enduml

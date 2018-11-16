@@ -1,0 +1,20 @@
+@startuml
+
+left to right direction
+
+class MainActivity implements MainActivityVP.View{
+//..
+--
+//..
+}
+
+class MainActivityPresenter implements MainActivityVP.Presenter{
+//..
+--
+//..
+}
+
+MainActivity -> MainActivityVP.Presenter
+MainActivityPresenter --> MainActivityVP.View
+
+@enduml

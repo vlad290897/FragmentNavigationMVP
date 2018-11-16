@@ -1,0 +1,43 @@
+@startuml
+
+'left to right direction
+
+abstract class BaseFragment
+
+class FragmentOne implements FragmentOneVP.View{
+//..
+--
+//..
+}
+
+class FragmentOnePresenter implements FragmentOneVP.Presenter{
+//..
+--
+//..
+}
+
+FragmentOne -> FragmentOneVP.Presenter
+FragmentOnePresenter --> FragmentOneVP.View
+
+
+class MainActivity implements MainActivityVP.View{
+//..
+--
+//..
+}
+
+class MainActivityPresenter implements MainActivityVP.Presenter{
+//..
+--
+//..
+}
+
+MainActivity -> MainActivityVP.Presenter
+MainActivityPresenter --> MainActivityVP.View
+
+FragmentOne --|> BaseFragment
+
+BaseFragment --|>FragmentNavigation.View
+MainActivityPresenter --|> FragmentNavigation.Presenter
+
+@enduml
